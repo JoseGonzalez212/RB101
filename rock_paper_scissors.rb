@@ -6,11 +6,11 @@ end
 
 def win?(first, second)
   winning_combos = {
-    'r' => w % (sc l),
-    'sc' => w % (p lizard),
-    'p' => w % (r sp),
-    'l' => w % (p sp),
-    'sp' => w % (r sc)
+    'r' => %w(sc l),
+    'sc' => %w(p lizard),
+    'p' => %w(r sp),
+    'l' => %w(p sp),
+    'sp' => %w(r sc)
   }
   winning_combos[first].include?(second)
 end
