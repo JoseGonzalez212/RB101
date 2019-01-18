@@ -30,6 +30,21 @@ def display_scores(score1, score2)
   prompt("Computer has #{score2} wins")
 end
 
+def convert_letter(letter)
+  case letter
+    when 'r'
+      'rock'
+    when 'sc'
+      'sciossors'
+    when 'p'
+      'paper'
+    when 'l'
+      'lizard'
+    when 'sp'
+      'spock'
+  end
+end
+
 player_score = 0
 computer_score = 0
 round_number = 1
@@ -60,7 +75,7 @@ loop do
 
   computer_choice = VALID_CHOICES.sample
 
-  prompt("You chose #{choice} Computer chose: #{computer_choice}")
+  prompt("You chose #{convert_letter(choice)} Computer chose: #{convert_letter(computer_choice)}")
 
   if results(choice, computer_choice) == 'You won!'
     player_score += 1
