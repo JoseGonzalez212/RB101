@@ -7,7 +7,7 @@ end
 def win?(first, second)
   winning_combos = {
     'r' => %w(sc l),
-    'sc' => %w(p lizard),
+    'sc' => %w(p l),
     'p' => %w(r sp),
     'l' => %w(p sp),
     'sp' => %w(r sc)
@@ -35,7 +35,7 @@ def convert_letter(letter)
     when 'r'
       'rock'
     when 'sc'
-      'sciossors'
+      'scissors'
     when 'p'
       'paper'
     when 'l'
